@@ -1,0 +1,25 @@
+{
+  "name": "lazy-spinner",
+  "dependencies": {
+    "react": "0.14.0-rc1",
+    "react-dom": "0.14.0-rc1",
+    "react-redux": "3.0.1",
+    "redux": "3.0.2",
+    "redux-actions": "0.8.0",
+    "redux-promise": "0.5.0",
+    "lodash": "3.10.1",
+    "domready": "1.0.8"
+  },
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "gulp-util": "3.0.6",
+    "browserify": "11.2.0",
+    "babelify": "6.3.0",
+    "watchify": "3.4.0",
+    "vinyl-source-stream": "1.1.0",
+    "vinyl-buffer": "1.0.0"
+  },
+  "engines": {
+    "node": "4.1.1"
+  }
+}
