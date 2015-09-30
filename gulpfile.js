@@ -14,15 +14,21 @@ var opts = {
   packageCache: {}
 };
 
-var b = watchify(browserify(opts));
-b.on('update', bundle);
-b.on('log', util.log);
+var b = watchify(browserify(opts), { poll: true });
 
 function bundle() {
   return b.bundle()
+    .on('error', function (err) {
+      util.log(err.toString());
+    })
     .pipe(source('bundle.js'))
     .pipe(buffer())
     .pipe(gulp.dest('./public/assets'));
 }
 
 gulp.task('default', bundle);
+b.on('update', function () {
+  util.log('Building...');
+  bundle();
+});
+b.on('log', util.log);

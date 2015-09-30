@@ -6,7 +6,7 @@
     "react-redux": "3.0.1",
     "redux": "3.0.2",
     "redux-actions": "0.8.0",
-    "redux-promise": "0.5.0",
+    "redux-thunk": "1.0.0",
     "lodash": "3.10.1",
     "domready": "1.0.8"
   },
